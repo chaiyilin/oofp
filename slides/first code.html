@@ -1,0 +1,52 @@
+<div class="row">
+    <h4>before</h4>
+    <div class="col-xs-6">
+
+        <pre>
+            <code>
+function showStudent(ssn) {
+    var student = db.get(ssn);
+    if (student !== null) {
+        document.querySelector(`#${elementId}`).innerHTML =
+            `${student.ssn},
+                ${student.firstname},
+                ${student.lastname}`
+    else
+        {
+            throw new Error('Student not found!');
+        }
+    }
+}
+
+showStudent('444-44-4444');
+
+            </code>
+        </pre>
+    </div>
+    <div class="col-xs-6 left-border">
+        <h4>after</h4>
+        <pre>
+            <code>
+var find = curry(function (db, id) {
+    var obj = db.get(id);
+    if (obj === null) {
+        throw new Error('Object not found!');
+    }
+    return obj;
+});
+var csv = student=> {
+    return `${student.ssn}, ${student.firstname}, ${student.lastname}`;
+};
+var append = curry(function (elementId, info) {
+    document.querySelector(elementId).innerHTML = info;
+});
+
+var showStudent = run(append('#student-info'), csv, find(db));
+showStudent('444-44-4444');
+
+            </code>
+        </pre>
+    </div>
+</div>
+
+<strong>there are still room to improve</strong>

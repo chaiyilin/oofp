@@ -1,0 +1,20 @@
+<h3>pure function</h3>
+
+<h4>avoid side effects when reading from or writing to external resources (unpredictable)</h4>
+<h4>separate the pure from the impure</h4>
+<ol>
+
+    <li>Changing a variable, property, or data structure in global/external</li>
+    <li>Changing the original value of a function’s argument</li>
+    <li>Processing user input</li>
+    <li>Throwing an exception, unless it’s caught within the same function</li>
+    <li>Printing to the screen or logging</li>
+    <li>Querying the HTML documents, browser cookies, or databases</li>
+    <li>avoid this(not the this in object) when possible
+        <span>call and apply</span>
+    </li>
+</ol>
+
+<h5>difficult to test</h5>
+
+
