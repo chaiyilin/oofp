@@ -1,7 +1,14 @@
 [
     "cover.md",
     "goal.html",
-    "JavaScript is as object-oriented as it is functional.md",
+    "pure function.html",
+    "JavaScript is as object-oriented as it is functional.html",
     "main difference.html",
-    "function types.html"
+    "function types.html",
+    "first code.html",
+    "another piece code.html",
+    "chain.html",
+    "naive improvement.html",
+    "lodash version.html",
+    "mixin version.html"
 ]

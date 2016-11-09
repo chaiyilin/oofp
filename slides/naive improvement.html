@@ -1,0 +1,29 @@
+<div class="row">
+    <div class="col-lg-6">
+        <h4>naive improvement</h4>
+    </div>
+
+</div>
+<div class="row">
+    <div class="col-md-12">
+
+        <pre>
+            <code style="max-height: 500px;height: 500px">
+        let enrollment = [
+            {enrolled: 2, grade: 100},
+            {enrolled: 2, grade: 80},
+            {enrolled: 1, grade: 89}
+        ];
+
+        let avg = (total, currentValue, currentIndex, arr)=> {
+            return arr.reduce((total, currentValue)=> total + currentValue) / arr.length
+        };
+
+        let filteredAverage = enrollment.filter(enroll=>enroll.enrolled > 1).map(enroll=>enroll.grade).reduce(avg);
+
+        expect(filteredAverage === 90).toEqual(true);
+
+            </code>
+        </pre>
+    </div>
+</div>

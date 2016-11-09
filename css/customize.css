@@ -13,3 +13,8 @@
 .left-border {
     border-left: 1px solid #ccc;
 }
+
+.with-top-margin {
+    margin-top: 20px !important;
+}
+

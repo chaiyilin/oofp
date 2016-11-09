@@ -1,0 +1,51 @@
+<div class="row">
+    <div class="col-lg-6">
+        <h4>before</h4>
+    </div>
+
+    <div class="col-lg-6">
+        <h4>after</h4>
+    </div>
+
+
+</div>
+<div class="row">
+    <div class="col-md-6">
+
+        <pre>
+            <code style="max-height: 500px;height: 500px">
+let enrollment = [
+    {enrolled: 2, grade: 100},
+    {enrolled: 2, grade: 80},
+    {enrolled: 1, grade: 89}
+];
+var totalGrades = 0;
+var totalStudentsFound = 0;
+for (let i = 0; i < enrollment.length; i++) {
+    let student = enrollment [i];
+    if (student !== null) {
+        if (student.enrolled > 1) {
+            totalGrades += student.grade;
+            totalStudentsFound++;
+        }
+    }
+}
+var average = totalGrades / totalStudentsFound; //-> 90
+
+
+            </code>
+        </pre>
+    </div>
+    <div class="col-md-6">
+        <pre>
+            <code style="max-height: 500px;height: 500px">
+_.chain(enrollment)
+    .filter(student => student.enrolled > 1)
+    .pluck('grade')
+    .average()
+    .value(); //-> 90
+
+            </code>
+        </pre>
+    </div>
+</div>
